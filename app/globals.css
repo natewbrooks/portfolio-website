@@ -1,27 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Montserrat:wght@600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.particles-container {
+    visibility: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.particles-container.visible {
+    visibility: visible;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+h1 {
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 6rem;
+}
+
+h2 {
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 4rem;
+}
+
+h3,
+button {
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 1rem;
+}
+
+p,
+li,
+input,
+textarea {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.triangleBkg {
+    width: 145vw;
+    height: 160vh;
+    clip-path: polygon(50% 88%, -20% 100%, 120% 100%);
+}
+
+.line {
+    width: 85vw;
+    height: 10px;
+    border-bottom: 1px solid white;
+    opacity: 10%;
+    position: absolute;
+}
+
+.thickLine {
+    width: 100vw;
+    height: 10px;
+    border-bottom: 6px solid gray;
+    opacity: 20%;
+    position: absolute;
 }
