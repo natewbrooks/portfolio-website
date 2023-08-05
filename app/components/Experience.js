@@ -2,7 +2,7 @@
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { HiCursorClick, HiInformationCircle } from 'react-icons/hi';
 import React, { useEffect, useState } from 'react';
-import Carousel from './Carousel';
+import Marquee from './Marquee';
 
 export default function ExperienceSection({ toolboxActive, toggleToolbox }) {
 	return (
@@ -47,7 +47,7 @@ export default function ExperienceSection({ toolboxActive, toggleToolbox }) {
 					{toolboxActive && (
 						<>
 							<div className='relative bottom-0 h-[5rem] w-[200vw] md:w-screen flex items-center justify-center'>
-								<Carousel size={80} />
+								<Marquee size={80} />
 							</div>
 						</>
 					)}

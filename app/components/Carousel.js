@@ -1,76 +1,56 @@
 import React, { useEffect, useState } from 'react';
-import {
-	FaGithubSquare,
-	FaJsSquare,
-	FaCss3Alt,
-	FaHtml5,
-	FaReact,
-	FaJava,
-	FaPython,
-	FaGitSquare,
-} from 'react-icons/fa';
+import { FaSign, FaCode, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { HiInformationCircle } from 'react-icons/hi';
 
-export default function Carousel({ size }) {
+export default function Carousel() {
+	const [projectInformationVisible, setProjectInfoVisible] = useState(false);
 	return (
 		<>
-			<div className='marquee w-full flex flex-row justify-evenly h-fit items-center text-zinc-900 xl:text-zinc-800'>
-				<FaGithubSquare
-					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
-				/>
-				<FaJsSquare
-					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
-				/>
-				<FaCss3Alt
-					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
-				/>
-				<FaHtml5
-					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
-				/>
-				<FaReact
-					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
-				/>
-				<FaJava
-					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
-				/>
-				<FaPython
-					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
-				/>
+			<div className='flex flex-row lg:space-x-10 items-center justify-center'>
+				<div className='hidden lg:block relative bg-zinc-400 w-[25vw] h-[30vh]'></div>
+				<div className='relative bg-zinc-200 w-[90vw] h-[70vw] lg:w-[40vw] lg:h-[45vh]'>
+					<div className='flex flex-row justify-between items-center px-5 bg-zinc-900 w-full h-[3rem] md:h-[4rem] opacity-90'>
+						<FaSign
+							size={30}
+							className='text-zinc-200'
+						/>
+						<h3 className='md:text-xl text-zinc-200'>Termdle</h3>
+						<HiInformationCircle
+							size={30}
+							onMouseEnter={() => setProjectInfoVisible(true)}
+							onMouseLeave={() => setProjectInfoVisible(false)}
+							onClick={() => setProjectInfoVisible(!projectInformationVisible)}
+							className={`text-zinc-200 hover:cursor-pointer hover:text-zinc-400 hover:border-2 hover:rounded-xl hover:border-red-300`}
+						/>
+					</div>
+					{projectInformationVisible && (
+						<div className='flex flex-row px-5 items-center w-full h-[6rem] md:h-[4rem] bg-zinc-800'>
+							<p>
+								Wordle clone I created in two days for a school project, I thought it had potential
+								so I continued to work on it.
+							</p>
+						</div>
+					)}
+					<div className='absolute bottom-0 flex flex-row justify-between items-center px-5 bg-zinc-900 w-full h-[3rem] md:h-[4rem] opacity-90'>
+						<FaCode
+							size={30}
+							className='text-zinc-200'
+						/>
+						<h3 className='text-xl'>Java</h3>
+					</div>
+				</div>
+				<div className='hidden lg:block relative bg-zinc-400 w-[25vw] h-[30vh]'></div>
 			</div>
-			<div className='marquee marquee2 w-full flex flex-row justify-between h-fit items-center text-zinc-900 xl:text-zinc-800'>
-				<FaGithubSquare
-					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
+
+			<div className='w-screen flex flex-row items-center justify-center space-x-10 mt-10'>
+				<FaArrowLeft
+					size={40}
+					className='text-zinc-200 hover:cursor-pointer hover:text-zinc-400'
 				/>
-				<FaJsSquare
-					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
-				/>
-				<FaCss3Alt
-					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
-				/>
-				<FaHtml5
-					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
-				/>
-				<FaReact
-					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
-				/>
-				<FaJava
-					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
-				/>
-				<FaPython
-					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
+				<p className='text-zinc-200 mt-2 text-xl md:text-2xl lg:text-4xl'>1/2</p>
+				<FaArrowRight
+					size={40}
+					className='text-zinc-200 hover:cursor-pointer hover:text-zinc-400'
 				/>
 			</div>
 		</>

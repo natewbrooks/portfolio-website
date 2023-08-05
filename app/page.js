@@ -13,7 +13,6 @@ export default function Home() {
 	const sections = ['experience', 'projects', 'contact'];
 	const [scrolled, setScrolled] = useState(false);
 	const [toolboxActive, setToolboxActive] = useState(true);
-	const [projectInformationVisible, setProjectInfoVisible] = useState(false);
 	const [emailSent, setEmailSent] = useState(false);
 
 	const toggleToolbox = () => {
@@ -80,10 +79,7 @@ export default function Home() {
 				toolboxActive={toolboxActive}
 				toggleToolbox={toggleToolbox}
 			/>
-			<Projects
-				projectInformationVisible={projectInformationVisible}
-				setProjectInfoVisible={setProjectInfoVisible}
-			/>
+			<Projects />
 			<Contact
 				emailSent={emailSent}
 				setEmailSent={setEmailSent}
