@@ -5,7 +5,7 @@ export default function Header({ scrolled }) {
 	return (
 		<section
 			id='home'
-			className='flex flex-col items-center justify-center w-screen h-[70vh] md:h-[90vh] mb-16'>
+			className='flex flex-col items-center justify-center w-screen h-[90vh] mb-16'>
 			<h1 className='text-4xl sm:text-5xl md:text-8xl select-none text-zinc-200'>natewbrooks</h1>
 			<p className='text-red-300 break-words mx-12 p-5 text-center select-none w-[90%] text-sm md:text-lg'>
 				junior software developer eager to learn new technology to create cool spiz.

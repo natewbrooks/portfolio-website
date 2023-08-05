@@ -1,5 +1,5 @@
-// ContactSection.js
-export default function ContactSection({ emailSent, setEmailSent }) {
+// Contact.js
+export default function Contact({ emailSent, setEmailSent }) {
 	return (
 		<section
 			id='contact'
@@ -22,7 +22,7 @@ export default function ContactSection({ emailSent, setEmailSent }) {
 						<input
 							type='hidden'
 							name='redirect'
-							value='localhost:3000'
+							value='/'
 						/>
 						<div className='flex flex-col lg:mb-5'>
 							<h3 className='hidden lg:block text-lg'>name</h3>
@@ -62,7 +62,7 @@ export default function ContactSection({ emailSent, setEmailSent }) {
 					</form>
 				)}
 				{emailSent && (
-					<div className='flex flex-col items-center text-center justify-center bg-zinc-900 w-[15rem] md:w-[20rem] lg:w-[30rem] h-[50%] p-5 rounded-lg'>
+					<div className='flex flex-col items-center text-center justify-center bg-zinc-900 w-[15rem] md:w-[20rem] lg:w-[30rem] h-[50%] my-20 p-10 rounded-lg'>
 						<h3 className='text-red-300 pb-5 md:pb-0'>email sent!</h3>
 						<h3 className='text-zinc-200'>I will reach out to you shortly!</h3>
 					</div>

@@ -13,7 +13,7 @@ export default function Navbar({ scrolled, sections, scrollToTop }) {
 
 	return (
 		<nav
-			className={`navbar bg-opacity-95 rounded-br-xl md:rounded-b-xl w-fit md:w-screen sticky top-0 flex flex-row md:justify-between items-center px-5 py-2 md:px-12  ${
+			className={`navbar z-50 bg-opacity-95 rounded-br-xl md:rounded-b-xl w-fit md:w-screen sticky top-0 flex flex-row md:justify-between items-center px-5 py-4 md:px-12  ${
 				scrolled ? 'bg-zinc-900' : 'bg-transparent'
 			} z-10`}>
 			<div className='flex flex-row'>

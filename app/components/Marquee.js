@@ -13,7 +13,7 @@ import {
 export default function Marquee({ size }) {
 	return (
 		<>
-			<div className='marquee w-full flex flex-row justify-evenly h-fit items-center text-zinc-900 xl:text-zinc-800 whitespace-nowrap'>
+			<div className='marquee w-full flex flex-row justify-around h-fit items-center text-zinc-900 xl:text-zinc-800 whitespace-nowrap'>
 				<FaGithubSquare
 					size={size}
 					className={`hover:scale-110 hover:text-zinc-200`}

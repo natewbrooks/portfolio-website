@@ -15,7 +15,7 @@ export default function ExperienceSection({ toolboxActive, toggleToolbox }) {
 
 			<div className='flex flex-col justify-center items-center h-full w-full'>
 				<div className='flex flex-col text-center md:mb-20'>
-					<p className='text-md md:text-xl text-zinc-200 break-words w-[50vw] xl:w-[35vw]'>
+					<p className='text-md md:text-xl text-zinc-200 break-words w-[80vw] xl:w-[35vw]'>
 						I’m a 19 year old computer science college student with 5+ years of programming
 						experience, and I have a passion for learning new technology and implementing it into
 						development to make really cool stuff.
@@ -41,7 +41,7 @@ export default function ExperienceSection({ toolboxActive, toggleToolbox }) {
 							className='select-none text-2xl md:text-4xl text-zinc-200 hover:text-red-300 hover:cursor-pointer pl-2'>
 							{toolboxActive ? 'toolbox' : 'certifications'}
 						</h2>
-						<HiCursorClick className='block w-[2rem] text-zinc-500 animate-slowblink' />
+						<HiCursorClick className={`block w-[2rem] text-zinc-500 animate-slowblink`} />
 					</div>
 
 					{toolboxActive && (
