@@ -30,7 +30,8 @@ export default function Experience({}) {
 						work so that I can develop valuable experiences to further my knowledge and skillset.
 					</p>
 					<a
-						href='#'
+						href='images/chess.png'
+						target='_blank'
 						className='group text-red-300 text-md md:text-xl my-10 lg:mt-16 relative flex flex-col items-center'>
 						view full résumé
 						<span className='relative rounded-lg w-0 h-[0.25rem] bg-red-400 bottom-0 group-hover:w-[6rem] transition-all duration-300 ease-in-out'></span>
