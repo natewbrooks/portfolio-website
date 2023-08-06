@@ -19,7 +19,7 @@ export default function Experience({}) {
 			</h2>
 
 			<div className='flex flex-col justify-center items-center h-full w-full'>
-				<p className='text-center md:mb-20 xl:mb-[7rem] text-md md:text-xl text-zinc-200 break-words w-[80vw] xl:w-[35vw]'>
+				<p className='text-center mb-10 md:mb-20 xl:mb-28 text-md md:text-xl text-zinc-200 break-words w-[80vw] xl:w-[35vw]'>
 					I’m a 19 year old computer science college student with 5+ years of programming
 					experience, and I have a passion for learning new technology and implementing it into
 					development to make really cool stuff.
