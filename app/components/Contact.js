@@ -24,7 +24,7 @@ export default function Contact({}) {
 					<input
 						type='hidden'
 						name='redirect'
-						value='https://www.natewbrooks.com/success'
+						value='https://natewbrooks.com/success'
 					/>
 					<input
 						name='name'
