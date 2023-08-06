@@ -20,13 +20,17 @@ export default function Experience({}) {
 
 			<div className='flex flex-col justify-center items-center h-full w-full'>
 				<p className='text-center mb-10 md:mb-20 xl:mb-28 text-md md:text-xl text-zinc-200 break-words w-[80vw] xl:w-[35vw]'>
-					I’m a 19 year old computer science college student with 5+ years of programming
-					experience, and I have a passion for learning new technology and implementing it into
-					development to make really cool stuff.
+					I’m a 19 year old computer science college student with 6+ years of programming
+					experience. I started with Java, creating Minecraft plugins. As I grew more comfortable
+					with programming, I decided to branch out, and I tried different languages to create
+					things I thought were cool. After making a few websites and simple applications, college
+					brought me back to Java, where I then pursued getting certified.
 					<br />
 					<br />
-					From web applications to desktop programs or mobile apps, I’m excited to take on diverse
-					work so that I can develop valuable experiences to further my knowledge and skillset.
+					I'm still very eager about branching out to create new things that maybe I'm not 100%
+					comfortable with. Whether it's web, desktop or mobile applications, or something
+					completely new, I'm always happy to take on new and interesting work so that eventually I
+					will be able to take on anything.
 				</p>
 
 				<div className='overflow-hidden flex flex-col items-center justify-end h-full w-screen mb-5'>

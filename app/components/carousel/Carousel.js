@@ -17,7 +17,7 @@ export default function Carousel() {
 			dateCompleted: '2021',
 			codeLanguages: 'HTML, CSS, JavaScript',
 			projectDescription:
-				'My first introduction to creating websites with a Minesweeper clone I made in a few days. I have come a long way in my ability to develop UI.',
+				'My first introduction to creating websites with a Minesweeper clone I made in a few days. Created before I knew how to build responsive designs.',
 			image: 'images/bombsniffer.webp',
 		},
 		{
