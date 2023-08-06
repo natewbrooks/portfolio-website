@@ -65,7 +65,7 @@ const CarouselCard = ({
 					</button>
 				</div>
 				{projectInformationVisible && (
-					<div className='flex flex-row p-4 items-center w-full h-fit bg-zinc-800 border-t-2 border-red-300 border-opacity-20'>
+					<div className='flex flex-row p-4 items-center w-full h-fit bg-zinc-800 border-t-2 border-red-300 border-opacity-80'>
 						<p>{projectDescription}</p>
 					</div>
 				)}

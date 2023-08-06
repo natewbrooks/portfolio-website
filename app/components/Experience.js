@@ -19,24 +19,15 @@ export default function Experience({}) {
 			</h2>
 
 			<div className='flex flex-col justify-center items-center h-full w-full'>
-				<div className='flex flex-col text-center md:mb-20'>
-					<p className='text-md md:text-xl text-zinc-200 break-words w-[80vw] xl:w-[35vw]'>
-						I’m a 19 year old computer science college student with 5+ years of programming
-						experience, and I have a passion for learning new technology and implementing it into
-						development to make really cool stuff.
-						<br />
-						<br />
-						From web applications to desktop programs or mobile apps, I’m excited to take on diverse
-						work so that I can develop valuable experiences to further my knowledge and skillset.
-					</p>
-					<a
-						href='images/chess.png'
-						target='_blank'
-						className='group text-red-300 text-md md:text-xl my-10 lg:mt-16 relative flex flex-col items-center'>
-						view full résumé
-						<span className='relative rounded-lg w-0 h-[0.25rem] bg-red-400 bottom-0 group-hover:w-[6rem] transition-all duration-300 ease-in-out'></span>
-					</a>
-				</div>
+				<p className='text-center md:mb-20 xl:mb-[7rem] text-md md:text-xl text-zinc-200 break-words w-[80vw] xl:w-[35vw]'>
+					I’m a 19 year old computer science college student with 5+ years of programming
+					experience, and I have a passion for learning new technology and implementing it into
+					development to make really cool stuff.
+					<br />
+					<br />
+					From web applications to desktop programs or mobile apps, I’m excited to take on diverse
+					work so that I can develop valuable experiences to further my knowledge and skillset.
+				</p>
 
 				<div className='overflow-hidden flex flex-col items-center justify-end h-full w-screen mb-5'>
 					<div className='triangleBkg hidden xl:block absolute bottom-2 bg-zinc-900'></div>
