@@ -4,7 +4,12 @@ import { HiCursorClick, HiInformationCircle } from 'react-icons/hi';
 import React, { useEffect, useState } from 'react';
 import Marquee from './Marquee';
 
-export default function ExperienceSection({ toolboxActive, toggleToolbox }) {
+export default function Experience({}) {
+	const [toolboxActive, setToolboxActive] = useState(true);
+	const toggleToolbox = () => {
+		setToolboxActive((prevToolboxActive) => !prevToolboxActive);
+	};
+
 	return (
 		<section
 			id='experience'

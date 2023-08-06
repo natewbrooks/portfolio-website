@@ -1,9 +1,15 @@
 // Contact.js
-export default function Contact({ emailSent, setEmailSent }) {
+import { useState } from 'react';
+
+export default function Contact({}) {
+	const [emailSent, setEmailSent] = useState(false);
+
 	return (
 		<section
 			id='contact'
-			className='relative h-fit w-screen bg-zinc-800 p-5 border-t-4 border-zinc-700'>
+			className={`relative h-fit w-screen bg-zinc-800 ${
+				emailSent ? 'p-20' : 'p-5'
+			} border-t-4 border-zinc-700`}>
 			<div className='text-zinc-200 p-8 md:p-0 flex flex-col items-center justify-center space-y-10 md:space-y-0 md:flex-row h-full md:space-x-10'>
 				<h2 className='w-full md:w-[20rem] lg:w-[40rem] text-center text-3xl md:text-4xl lg:text-6xl'>
 					let's make something cool together.
@@ -56,6 +62,7 @@ export default function Contact({ emailSent, setEmailSent }) {
 						/>
 						<button
 							type='submit'
+							aria-label='contact submission'
 							className='w-[7rem] h-[3rem] hover:border-2 rounded-lg hover:border-red-300 bg-zinc-900 focus:bg-zinc-800 focus:duration-300'>
 							contact
 						</button>

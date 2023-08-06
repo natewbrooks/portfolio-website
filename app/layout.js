@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
 		<html
 			lang='en'
 			style={{ scrollBehavior: 'smooth' }}>
-			<body className={`bg-zinc-900 text-zinc-200`}>{children}</body>
+			<body className={`bg-zinc-900 text-zinc-200 overflow-x-hidden`}>{children}</body>
 		</html>
 	);
 }

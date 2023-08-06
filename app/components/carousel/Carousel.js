@@ -29,7 +29,7 @@ export default function Carousel() {
 			image: 'images/chess.png',
 		},
 		{
-			title: 'Portfolio Website',
+			title: 'Portfolio',
 			dateCompleted: '2023',
 			codeLanguages: 'HTML, TailwindCSS, Next.JS',
 			projectDescription: 'The website you are currently on. Hope you like it.',

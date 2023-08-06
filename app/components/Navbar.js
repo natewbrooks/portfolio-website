@@ -38,7 +38,7 @@ export default function Navbar({ scrolled, sections, scrollToTop }) {
 					<li
 						key={s}
 						className='text-lg md:text-xl text-zinc-200 hover:text-zinc-400 hover:cursor-pointer'>
-						<Link href={`#${s}`}>{s}</Link>
+						<a href={`#${s}`}>{s}</a>
 					</li>
 				))}
 			</ul>
@@ -66,7 +66,7 @@ export default function Navbar({ scrolled, sections, scrollToTop }) {
 						<li
 							key={s}
 							className='text-lg text-zinc-200 md:text-xl hover:text-zinc-400 hover:cursor-pointer'>
-							<Link href={`#${s}`}>{s}</Link>
+							<a href={`#${s}`}>{s}</a>
 						</li>
 					))}
 				</ul>
