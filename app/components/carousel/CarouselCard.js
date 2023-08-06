@@ -26,7 +26,10 @@ const CarouselCard = ({
 					backgroundSize: 'cover',
 					backgroundPosition: 'center',
 				}}>
-				<div className='flex flex-row justify-between items-center px-5 bg-zinc-900 w-full h-[3rem] md:h-[4rem] border-t-2 border-x-2 border-red-300 border-opacity-20'>
+				<div
+					className={`flex flex-row justify-between items-center px-5 bg-zinc-900 w-full h-[3rem] md:h-[4rem] border-t-2 border-x-2 border-red-300 ${
+						isActive ? 'border-opacity-80' : 'border-opacity-20'
+					}`}>
 					<div className='relative flex flex-row items-center'>
 						<FaCalendarCheck
 							className={`${
@@ -66,7 +69,10 @@ const CarouselCard = ({
 						<p>{projectDescription}</p>
 					</div>
 				)}
-				<div className='absolute bottom-0 flex flex-row justify-between items-center px-5 bg-zinc-900 w-full h-[3rem] md:h-[4rem] border-b-2 border-x-2 border-red-300 border-opacity-20'>
+				<div
+					className={`absolute bottom-0 flex flex-row justify-between items-center px-5 bg-zinc-900 w-full h-[3rem] md:h-[4rem] border-b-2 border-x-2 border-red-300 ${
+						isActive ? 'border-opacity-80' : 'border-opacity-20'
+					}`}>
 					<FaCode
 						className={`${
 							isActive ? 'h-[25px] w-[25px] md:h-[30px] md:w-[30px]' : 'h-[20px] w-[20px]'

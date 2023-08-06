@@ -10,7 +10,7 @@ export default function Carousel() {
 			codeLanguages: 'Java',
 			projectDescription:
 				'Wordle clone I created in two days for a school project, I thought it had potential so I continued to work on it.',
-			image: 'images/termdleImg.png',
+			image: 'images/termdleImg.webp',
 		},
 		{
 			title: 'Bombsniffer',
@@ -18,7 +18,7 @@ export default function Carousel() {
 			codeLanguages: 'HTML, CSS, JavaScript',
 			projectDescription:
 				'My first introduction to creating websites with a Minesweeper clone I made in a few days. I have come a long way in my ability to develop UI.',
-			image: 'images/bombsniffer.png',
+			image: 'images/bombsniffer.webp',
 		},
 		{
 			title: 'Chess',
@@ -26,16 +26,15 @@ export default function Carousel() {
 			codeLanguages: 'Java',
 			projectDescription:
 				'A barebones chess demonstration, UI unfinished but fully playable with another person. I worked on it in preparation for taking my Java Associate certification.',
-			image: 'images/chess.png',
+			image: 'images/chess.webp',
 		},
 		{
 			title: 'Portfolio',
 			dateCompleted: '2023',
 			codeLanguages: 'HTML, TailwindCSS, Next.JS',
 			projectDescription: 'The website you are currently on. Hope you like it.',
-			image: 'images/portfolioSite.png',
+			image: 'images/portfolioSite.webp',
 		},
-		// Add more card data objects as needed
 	];
 
 	var [activeCardIndex, setActiveCardIndex] = useState(0);

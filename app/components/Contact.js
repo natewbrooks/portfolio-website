@@ -17,18 +17,18 @@ export default function Contact({}) {
 				{!emailSent && (
 					<form
 						onSubmit={() => setEmailSent(true)}
-						action='https://api.web3forms.com/submit'
+						action='https://api.web3forms.com/submit '
 						method='POST'
 						className='flex flex-col items-center h-full justify-center'>
 						<input
 							type='hidden'
 							name='access_key'
-							value='874f3f6c-e8a5-414d-a86f-7b4f932640df'
+							value='874f3f6c-e8a5-414d-a86f-7b4f932640df '
 						/>
 						<input
 							type='hidden'
 							name='redirect'
-							value='/'
+							value='www.bing.com'
 						/>
 						<div className='flex flex-col lg:mb-5'>
 							<h3 className='hidden lg:block text-lg'>name</h3>
