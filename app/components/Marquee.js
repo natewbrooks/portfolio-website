@@ -13,64 +13,64 @@ import {
 export default function Marquee({ size }) {
 	return (
 		<>
-			<div className='marquee w-full flex flex-row justify-around h-fit items-center text-zinc-900 xl:text-zinc-800 whitespace-nowrap'>
+			<div className='marquee w-full flex flex-row justify-around h-fit items-center text-zinc-200 whitespace-nowrap'>
 				<FaGithubSquare
 					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
+					className={`hover:scale-110 hover:text-zinc-900`}
 				/>
 				<FaJsSquare
 					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
+					className={`hover:scale-110 hover:text-zinc-900`}
 				/>
 				<FaCss3Alt
 					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
+					className={`hover:scale-110 hover:text-zinc-900`}
 				/>
 				<FaHtml5
 					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
+					className={`hover:scale-110 hover:text-zinc-900`}
 				/>
 				<FaReact
 					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
+					className={`hover:scale-110 hover:text-zinc-900`}
 				/>
 				<FaJava
 					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
+					className={`hover:scale-110 hover:text-zinc-900`}
 				/>
 				<FaPython
 					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
+					className={`hover:scale-110 hover:text-zinc-900`}
 				/>
 			</div>
-			<div className='marquee marquee2 w-full flex flex-row justify-between h-fit items-center text-zinc-900 xl:text-zinc-800 whitespace-nowrap'>
+			<div className='marquee marquee2 w-full flex flex-row justify-between h-fit items-center text-zinc-200 whitespace-nowrap'>
 				<FaGithubSquare
 					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
+					className={`hover:scale-110 hover:text-zinc-900`}
 				/>
 				<FaJsSquare
 					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
+					className={`hover:scale-110 hover:text-zinc-900`}
 				/>
 				<FaCss3Alt
 					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
+					className={`hover:scale-110 hover:text-zinc-900`}
 				/>
 				<FaHtml5
 					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
+					className={`hover:scale-110 hover:text-zinc-900`}
 				/>
 				<FaReact
 					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
+					className={`hover:scale-110 hover:text-zinc-900`}
 				/>
 				<FaJava
 					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
+					className={`hover:scale-110 hover:text-zinc-900`}
 				/>
 				<FaPython
 					size={size}
-					className={`hover:scale-110 hover:text-zinc-200`}
+					className={`hover:scale-110 hover:text-zinc-900`}
 				/>
 			</div>
 		</>

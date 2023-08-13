@@ -10,7 +10,7 @@ export default function Header({ scrolled }) {
 				natewbrooks
 			</h1>
 			<p className='text-red-300 break-words mx-12 p-5 text-center select-none w-[90%] text-sm md:text-lg'>
-				junior software developer eager to learn new technology to create cool spiz.
+				junior software developer who loves to learn new technology and create cool stuff.
 			</p>
 			<p
 				className={`absolute bottom-28 text-lg ${
