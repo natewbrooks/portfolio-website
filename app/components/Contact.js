@@ -5,7 +5,7 @@ export default function Contact({}) {
 	return (
 		<section
 			id='contact'
-			className={`relative h-fit w-screen bg-zinc-800 p-5'
+			className={`h-fit w-screen bg-zinc-800 p-5'
 			} border-t-4 border-zinc-700`}>
 			<div className='text-zinc-200 p-8 md:p-10 flex flex-col items-center justify-center space-y-10 md:space-y-0 md:flex-row h-full md:space-x-10'>
 				<h2 className='w-full md:w-[20rem] lg:w-[40rem] text-center text-3xl md:text-4xl lg:text-6xl '>
@@ -29,14 +29,14 @@ export default function Contact({}) {
 					<input
 						name='name'
 						type='text'
-						placeholder='name'
+						placeholder='your name'
 						className='hover:border-red-300 hover:border-2 placeholder:text-center w-[15rem] lg:w-[20rem] h-[2.5rem] bg-zinc-900 flex items-center mt-2 px-3 placeholder-zinc-600 text-zinc-600 focus:outline-none focus:border-2 focus:border-red-300'
 						required
 					/>
 					<input
 						name='email'
 						type='email'
-						placeholder='email'
+						placeholder='your email'
 						className='hover:border-red-300 hover:border-2 placeholder:text-center w-[15rem] lg:w-[20rem] h-[2.5rem] bg-zinc-900 flex items-center mt-2 mb-2 px-3 placeholder-zinc-600 text-zinc-600 focus:outline-none focus:border-2 focus:border-red-300'
 						required
 					/>

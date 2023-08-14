@@ -13,8 +13,8 @@ export default function Experience({}) {
 	return (
 		<section
 			id='experience'
-			className='relative flex flex-col h-fit w-screen bg-zinc-800'>
-			<h2 className='text-4xl sm:text-5xl md:text-6xl text-center mt-20 mb-10 md:mb-12 text-zinc-200'>
+			className='relative flex flex-col h-fit lg:h-[56rem] w-screen bg-zinc-800'>
+			<h2 className='text-4xl sm:text-5xl md:text-6xl text-center mt-20 mb-10 md:mb-12 lg:mb-[6rem] text-zinc-200'>
 				experience
 			</h2>
 
