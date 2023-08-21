@@ -15,7 +15,7 @@ export default function Contact({}) {
 				<form
 					action='https://api.web3forms.com/submit'
 					method='POST'
-					className='flex flex-col items-center h-full justify-center'>
+					className='flex flex-col items-center h-full justify-center w-[15rem] lg:w-[20rem]'>
 					<input
 						type='hidden'
 						name='access_key'
@@ -26,38 +26,40 @@ export default function Contact({}) {
 						name='redirect'
 						value='https://natewbrooks.com/success'
 					/>
-					<input
-						name='name'
-						type='text'
-						placeholder='your name'
-						className='hover:border-red-300 hover:border-2 placeholder:text-center w-[15rem] lg:w-[20rem] h-[2.5rem] bg-zinc-900 flex items-center mt-2 px-3 placeholder-zinc-600 text-zinc-600 focus:outline-none focus:border-2 focus:border-red-300'
-						required
-					/>
-					<input
-						name='email'
-						type='email'
-						placeholder='your email'
-						className='hover:border-red-300 hover:border-2 placeholder:text-center w-[15rem] lg:w-[20rem] h-[2.5rem] bg-zinc-900 flex items-center mt-2 mb-2 px-3 placeholder-zinc-600 text-zinc-600 focus:outline-none focus:border-2 focus:border-red-300'
-						required
-					/>
+					<div className={`flex flex-row space-x-1`}>
+						<input
+							name='name'
+							type='text'
+							placeholder='your name'
+							className='hover:border-red-300 hover:border-2 placeholder:text-center w-full  h-[2.5rem] bg-zinc-900 flex items-center mt-2 px-3 placeholder-zinc-600 text-zinc-600 focus:outline-none focus:border-2 focus:border-red-300'
+							required
+						/>
+						<input
+							name='email'
+							type='email'
+							placeholder='your email'
+							className='hover:border-red-300 hover:border-2 placeholder:text-center w-full h-[2.5rem] bg-zinc-900 flex items-center mt-2 mb-2 px-3 placeholder-zinc-600 text-zinc-600 focus:outline-none focus:border-2 focus:border-red-300'
+							required
+						/>
+					</div>
 					<input
 						name='subject'
 						type='text'
 						placeholder='subject'
-						className='hover:border-red-300 hover:border-2 px-3 placeholder:text-center placeholder-zinc-600 text-zinc-600 focus:outline-none focus:border-2 focus:border-red-300 w-[15rem] lg:w-[20rem] h-[2.5rem] bg-zinc-900 flex items-center mb-2'
+						className='hover:border-red-300 hover:border-2 px-3 placeholder:text-center placeholder-zinc-600 text-zinc-600 focus:outline-none focus:border-2 focus:border-red-300 w-full h-[2.5rem] bg-zinc-900 flex items-center mb-2'
 						required
 					/>
 					<textarea
 						name='message'
 						placeholder='message'
-						className='p-3 mb-5 hover:border-red-300 hover:border-2 placeholder:text-center w-[15rem] lg:w-[20rem]  h-[6rem] bg-zinc-900 placeholder-zinc-600 text-zinc-600 focus:outline-none focus:border-2 focus:border-red-300'
+						className='p-3 mb-5 hover:border-red-300 hover:border-2 placeholder:text-center w-full  h-[6rem] bg-zinc-900 placeholder-zinc-600 text-zinc-600 focus:outline-none focus:border-2 focus:border-red-300'
 						required
 					/>
 					<button
 						type='submit'
 						aria-label='contact submission'
-						className='w-[7rem] h-[3rem] hover:border-2 rounded-lg hover:border-red-300 bg-zinc-900 focus:bg-zinc-800 focus:duration-300'>
-						contact
+						className='w-[7rem] h-[3rem] hover:border-2 rounded-lg hover:border-red-300 text-zinc-200 bg-zinc-900 focus:bg-zinc-800 focus:duration-300'>
+						send
 					</button>
 				</form>
 			</div>

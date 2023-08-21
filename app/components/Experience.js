@@ -34,7 +34,7 @@ export default function Experience({}) {
 				</p>
 
 				<div className='overflow-hidden flex flex-col items-center justify-end h-full w-screen mb-5'>
-					<div className='triangleBkg hidden xl:block absolute bottom-2 bg-zinc-900'></div>
+					<div className='triangleBkg h-full hidden 2xl:block absolute bottom-2 bg-zinc-900'></div>
 					<div className='flex flex-row w-full h-fit justify-center items-center z-10 p-10 md:p-12 lg:p-8 after:border-t-2 after:border-zinc-900 after:xl:border-zinc-800 after:w-[75vw] after:absolute after:bottom-28'>
 						<h2 className='select-none text-2xl md:text-4xl text-zinc-200'>my</h2>
 						<h2

@@ -5,20 +5,20 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 export default function Carousel() {
 	const cardData = [
 		{
-			title: 'Termdle',
-			dateCompleted: '2021',
-			codeLanguages: 'Java',
-			projectDescription:
-				'Wordle clone I created in two days for a school project, I thought it had potential so I continued to work on it.',
-			image: 'images/termdleImg.webp',
+			title: 'Breakthrough Coaching',
+			dateCompleted: '2023',
+			codeLanguages: 'HTML, TailwindCSS, Next.JS',
+			projectDescription: '',
+			image: 'images/lizsite.webp',
+			link: 'https://breakthroughcoaching.pro',
 		},
 		{
-			title: 'Bombsniffer',
-			dateCompleted: '2021',
-			codeLanguages: 'HTML, CSS, JavaScript',
-			projectDescription:
-				'My first introduction to creating websites with a Minesweeper clone I made in a few days. Created before I knew how to build responsive designs.',
-			image: 'images/bombsniffer.webp',
+			title: 'Portfolio',
+			dateCompleted: '2023',
+			codeLanguages: 'HTML, TailwindCSS, Next.JS',
+			projectDescription: 'The website you are currently on. Hope you like it.',
+			image: 'images/portfolioSite.webp',
+			link: '',
 		},
 		{
 			title: 'Chess',
@@ -27,13 +27,25 @@ export default function Carousel() {
 			projectDescription:
 				'A barebones chess demonstration, UI unfinished but fully playable with another person. I worked on it in preparation for taking my Java Associate certification.',
 			image: 'images/chess.webp',
+			link: '',
 		},
 		{
-			title: 'Portfolio',
-			dateCompleted: '2023',
-			codeLanguages: 'HTML, TailwindCSS, Next.JS',
-			projectDescription: 'The website you are currently on. Hope you like it.',
-			image: 'images/portfolioSite.webp',
+			title: 'Bombsniffer',
+			dateCompleted: '2021',
+			codeLanguages: 'HTML, CSS, JavaScript',
+			projectDescription:
+				'My first introduction to creating websites with a Minesweeper clone I made in a few days. Created before I knew how to build responsive designs.',
+			image: 'images/bombsniffer.webp',
+			link: '',
+		},
+		{
+			title: 'Termdle',
+			dateCompleted: '2021',
+			codeLanguages: 'Java',
+			projectDescription:
+				'Wordle clone I created in two days for a school project, I thought it had potential so I continued to work on it.',
+			image: 'images/termdleImg.webp',
+			link: '',
 		},
 	];
 
