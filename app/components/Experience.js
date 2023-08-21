@@ -54,7 +54,7 @@ export default function Experience({}) {
 					)}
 
 					{!toolboxActive && (
-						<ul className='text-zinc-200 h-fit py-10 text-md text-center list-disc w-fit marker:text-red-300'>
+						<ul className='text-zinc-200 h-fit px-20 py-10 md:py-5 text-md text-center list-disc w-fit marker:text-red-300'>
 							<li className=''>Oracle Certified Associate, Java SE 8 Programmer @ JULY 2023</li>
 							<li>... more to come</li>
 						</ul>
