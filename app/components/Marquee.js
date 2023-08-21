@@ -12,7 +12,8 @@ import {
 
 export default function Marquee({ size }) {
 	return (
-		<div className={`relative flex flex-row h-[80px] w-full items-center justify-center`}>
+		<div
+			className={`relative flex flex-row h-[80px] w-full items-center justify-center overflow-hidden`}>
 			<div className='marquee w-full flex flex-row justify-around h-full items-center text-zinc-200 whitespace-nowrap'>
 				<FaGithubSquare
 					size={size}

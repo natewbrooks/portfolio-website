@@ -13,7 +13,7 @@ export default function Experience({}) {
 	return (
 		<section
 			id='experience'
-			className='relative flex flex-col h-fit w-screen bg-zinc-800'>
+			className='relative flex flex-col h-fit w-screen bg-zinc-800 overflow-hidden'>
 			<h2 className='text-4xl sm:text-5xl md:text-6xl text-center mt-20 mb-10 md:mb-12 lg:mb-[6rem] text-zinc-200'>
 				experience
 			</h2>
@@ -47,7 +47,7 @@ export default function Experience({}) {
 
 					{toolboxActive && (
 						<>
-							<div className='h-fit py-5 w-[200vw] md:w-screen flex items-center justify-center'>
+							<div className='h-fit py-5 w-[200vw] md:w-screen flex items-center justify-center overflow-hidden'>
 								<Marquee size={80} />
 							</div>
 						</>
