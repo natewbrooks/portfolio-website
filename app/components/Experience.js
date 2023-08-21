@@ -13,7 +13,7 @@ export default function Experience({}) {
 	return (
 		<section
 			id='experience'
-			className='relative flex flex-col h-fit lg:h-[56rem] w-screen bg-zinc-800'>
+			className='relative flex flex-col h-fit w-screen bg-zinc-800'>
 			<h2 className='text-4xl sm:text-5xl md:text-6xl text-center mt-20 mb-10 md:mb-12 lg:mb-[6rem] text-zinc-200'>
 				experience
 			</h2>
@@ -33,9 +33,8 @@ export default function Experience({}) {
 					will be able to take on anything.
 				</p>
 
-				<div className='overflow-hidden flex flex-col items-center justify-end h-full w-screen mb-5'>
-					<div className='triangleBkg h-full hidden 2xl:block absolute bottom-2 bg-zinc-900'></div>
-					<div className='flex flex-row w-full h-fit justify-center items-center z-10 p-10 md:p-12 lg:p-8 after:border-t-2 after:border-zinc-900 after:xl:border-zinc-800 after:w-[75vw] after:absolute after:bottom-28'>
+				<div className='bg-zinc-900 rounded-t-[3rem] flex flex-col items-center justify-between h-fit w-screen mb-2 mt-20 md:mt-10'>
+					<div className='flex flex-row w-full h-fit justify-center items-center z-10 py-5 md:py-10'>
 						<h2 className='select-none text-2xl md:text-4xl text-zinc-200'>my</h2>
 						<h2
 							onClick={toggleToolbox}
@@ -44,17 +43,18 @@ export default function Experience({}) {
 						</h2>
 						<HiCursorClick className={`block w-[2rem] text-zinc-500 animate-slowblink`} />
 					</div>
+					<div className={`border-t-2 border-zinc-800 w-[75vw]`}></div>
 
 					{toolboxActive && (
 						<>
-							<div className='relative bottom-0 h-[5rem] w-[200vw] md:w-screen flex items-center justify-center'>
+							<div className='h-fit py-5 w-[200vw] md:w-screen flex items-center justify-center'>
 								<Marquee size={80} />
 							</div>
 						</>
 					)}
 
 					{!toolboxActive && (
-						<ul className='text-zinc-200 relative bottom-0 h-[5rem] px-10 text-md text-center list-disc w-fit marker:text-red-300'>
+						<ul className='text-zinc-200 h-fit py-10 text-md text-center list-disc w-fit marker:text-red-300'>
 							<li className=''>Oracle Certified Associate, Java SE 8 Programmer @ JULY 2023</li>
 							<li>... more to come</li>
 						</ul>

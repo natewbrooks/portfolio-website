@@ -17,32 +17,54 @@ const CarouselCard = ({
 	return (
 		<>
 			<div
-				className={`relative flex flex-col ${
+				className={`relative flex flex-col overflow-hidden ${
 					isActive
 						? 'w-[90vw] h-[50vh] md:h-[90vh] lg:w-[40vw] lg:h-[60vh]'
 						: 'hidden lg:block opacity-30 w-[25vw] h-[40vh]'
 				} `}
 				style={{}}>
 				<div
-					className={`relative flex flex-row justify-between items-center px-5 bg-zinc-900 w-full h-[3rem] md:h-[4rem] border-t-2 border-x-2 border-red-300 ${
+					className={`relative flex flex-col justify-start md:flex-row md:justify-between items-center py-3 md:py-3 px-5 bg-zinc-900 w-full space-y-3 md:space-y-0 h-fit border-t-2 border-x-2 border-red-300 ${
 						isActive ? 'border-opacity-80' : 'border-opacity-20'
 					} z-20`}>
-					<div className='relative flex flex-row items-center'>
-						<FaCalendarCheck
-							className={`${
-								isActive ? 'h-[25px] w-[25px] md:h-[30px] md:w-[30px]' : 'h-[20px] w-[20px]'
-							}`}
-						/>
-						<h3
-							className={`absolute text-center ${
-								isActive ? 'text-sm md:text-xl left-8 md:left-10 ' : 'text-sm left-6 '
-							} `}>
-							{dateCompleted}
-						</h3>
+					<div className='relative flex flex-row w-full md:w-fit justify-between'>
+						<div className={`flex flex-row items-center`}>
+							<FaCalendarCheck
+								className={`${
+									isActive ? 'h-[25px] w-[25px] md:h-[30px] md:w-[30px]' : 'h-[20px] w-[20px]'
+								}`}
+							/>
+							<h3
+								className={`relative md:absolute md:left-10 text-center ${
+									isActive ? 'text-sm md:text-xl left-2 ' : 'text-sm left-2 '
+								} `}>
+								{dateCompleted}
+							</h3>
+						</div>
+						{projectDescription != '' && (
+							<button
+								onClick={() => {
+									isActive ? setProjectInfoVisible(!projectInformationVisible) : '';
+								}}
+								aria-label='information'
+								className={`block md:hidden text-zinc-200 ${
+									isActive
+										? 'hover:text-zinc-400 border-2 border-transparent hover:rounded-full hover:border-red-300'
+										: 'hover:cursor-default'
+								}`}>
+								{projectDescription != '' && (
+									<HiInformationCircle
+										className={`${
+											isActive ? 'h-[25px] w-[25px] md:h-[30px] md:w-[30px]' : 'h-[20px] w-[20px]'
+										}`}
+									/>
+								)}
+							</button>
+						)}
 					</div>
 
 					{link != '' ? (
-						<div className={`flex flex-row items-center justify-center`}>
+						<div className={`flex flex-row items-center md:justify-center`}>
 							<Link href={`${link}`}>
 								<h3
 									className={`${
@@ -52,7 +74,7 @@ const CarouselCard = ({
 								</h3>
 							</Link>
 							<FaLink
-								className={`relative left-5 opacity-30 ${
+								className={`relative left-2 md:left-5 opacity-30 ${
 									isActive ? 'h-[10px] w-[10px] md:h-[15px] md:w-[15px]' : 'h-[10px] w-[10px]'
 								}`}
 							/>
@@ -67,7 +89,7 @@ const CarouselCard = ({
 							isActive ? setProjectInfoVisible(!projectInformationVisible) : '';
 						}}
 						aria-label='information'
-						className={`text-zinc-200 ${
+						className={`hidden md:block text-zinc-200 ${
 							isActive
 								? 'hover:text-zinc-400 border-2 border-transparent hover:rounded-full hover:border-red-300'
 								: 'hover:cursor-default'
@@ -83,10 +105,8 @@ const CarouselCard = ({
 				</div>
 				{projectDescription != '' && (
 					<div
-						className={`flex flex-row p-4 items-center w-full h-fit bg-zinc-800 border-t-2 border-red-300 border-opacity-80 z-10 transition-all duration-500 ${
-							projectInformationVisible
-								? 'translate-y-0 scale-y-100'
-								: 'translate-y-[-100%] scale-y-0'
+						className={`flex flex-row p-4 items-center w-full h-fit bg-zinc-900 bg-opacity-[.95] border-t-2 border-red-300 border-opacity-80 z-10 transition-all duration-500 ${
+							projectInformationVisible ? 'translate-y-0' : 'translate-y-[-100%]'
 						}`}>
 						<p>{projectDescription}</p>
 					</div>
@@ -94,7 +114,7 @@ const CarouselCard = ({
 				<img
 					src={image}
 					alt={title}
-					className='absolute top-0 w-full h-full object-cover'
+					className='absolute top-0 w-full h-full object-top object-cover'
 				/>
 
 				<div

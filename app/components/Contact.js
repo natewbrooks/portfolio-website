@@ -30,14 +30,14 @@ export default function Contact({}) {
 						<input
 							name='name'
 							type='text'
-							placeholder='your name'
+							placeholder='name'
 							className='hover:border-red-300 hover:border-2 placeholder:text-center w-full  h-[2.5rem] bg-zinc-900 flex items-center mt-2 px-3 placeholder-zinc-600 text-zinc-600 focus:outline-none focus:border-2 focus:border-red-300'
 							required
 						/>
 						<input
 							name='email'
 							type='email'
-							placeholder='your email'
+							placeholder='email'
 							className='hover:border-red-300 hover:border-2 placeholder:text-center w-full h-[2.5rem] bg-zinc-900 flex items-center mt-2 mb-2 px-3 placeholder-zinc-600 text-zinc-600 focus:outline-none focus:border-2 focus:border-red-300'
 							required
 						/>
@@ -58,7 +58,7 @@ export default function Contact({}) {
 					<button
 						type='submit'
 						aria-label='contact submission'
-						className='w-[7rem] h-[3rem] hover:border-2 rounded-lg hover:border-red-300 text-zinc-200 bg-zinc-900 focus:bg-zinc-800 focus:duration-300'>
+						className='w-[7rem] h-[3rem] mt-9 md:mt-0 scale-[.8] xl:hover:scale-100 transition duration-300 rounded-lg hover:border-red-300 text-zinc-800 bg-zinc-200 xl:focus:scale-[.8] xl:focus:bg-opacity-50'>
 						send
 					</button>
 				</form>
