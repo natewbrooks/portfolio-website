@@ -26,25 +26,29 @@ export default function Contact({}) {
 						name='redirect'
 						value='https://natewbrooks.com/success'
 					/>
+					<input
+						type='hidden'
+						name='from_name'
+						value='[!] New Website Submission! - natewbrooks.com'></input>
 					<div className={`flex flex-row space-x-1`}>
 						<input
-							name='name'
 							type='text'
+							name='name'
 							placeholder='name'
 							className='hover:border-red-300 hover:border-2 placeholder:text-center w-full  h-[2.5rem] bg-zinc-900 flex items-center mt-2 px-3 placeholder-zinc-600 text-zinc-600 focus:outline-none focus:border-2 focus:border-red-300'
 							required
 						/>
 						<input
-							name='email'
 							type='email'
+							name='email'
 							placeholder='email'
 							className='hover:border-red-300 hover:border-2 placeholder:text-center w-full h-[2.5rem] bg-zinc-900 flex items-center mt-2 mb-2 px-3 placeholder-zinc-600 text-zinc-600 focus:outline-none focus:border-2 focus:border-red-300'
 							required
 						/>
 					</div>
 					<input
-						name='subject'
 						type='text'
+						name='subject'
 						placeholder='subject'
 						className='hover:border-red-300 hover:border-2 px-3 placeholder:text-center placeholder-zinc-600 text-zinc-600 focus:outline-none focus:border-2 focus:border-red-300 w-full h-[2.5rem] bg-zinc-900 flex items-center mb-2'
 						required
