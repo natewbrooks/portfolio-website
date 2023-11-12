@@ -4,14 +4,14 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 export default function Carousel() {
 	const cardData = [
-		{
-			title: 'Breakthrough Coaching',
-			dateCompleted: '2023',
-			codeLanguages: 'HTML, TailwindCSS, Next.JS',
-			projectDescription: '',
-			image: 'images/lizsite.webp',
-			link: 'https://breakthroughcoaching.pro',
-		},
+		// {
+		// 	title: 'Breakthrough Coaching',
+		// 	dateCompleted: '2023',
+		// 	codeLanguages: 'HTML, TailwindCSS, Next.JS',
+		// 	projectDescription: '',
+		// 	image: 'images/lizsite.webp',
+		// 	link: 'https://breakthroughcoaching.pro',
+		// },
 		{
 			title: 'Portfolio',
 			dateCompleted: '2023',
