@@ -13,7 +13,7 @@ export default function Navbar({ sections, scrollToTop }) {
 
 	return (
 		<nav
-			className={`navbar z-50 bg-opacity-95 rounded-br-xl md:rounded-b-xl w-fit md:w-screen fixed top-0 flex flex-row md:justify-between items-center px-5 py-4 md:px-12 bg-zinc-900`}>
+			className={`navbar z-50 bg-opacity-95 rounded-br-xl md:rounded-b-xl w-fit md:w-screen fixed top-0 flex flex-row md:justify-between items-center px-5 py-4 md:px-12 md:bg-zinc-900`}>
 			<div className='flex flex-row'>
 				<FaGithubSquare
 					size={35}
@@ -46,7 +46,7 @@ export default function Navbar({ sections, scrollToTop }) {
 
 			{/* Mobile Menu */}
 
-			<div className='md:hidden absolute top-4 w-fit left-4 flex flex-col z-10'>
+			<div className='md:hidden fixed top-4 w-fit left-4 flex flex-col z-10'>
 				<button
 					onClick={toggleMobileMenu}
 					className={`w-fit bg-zinc-900 p-2 rounded-md text-zinc-200 md:hidden hover:cursor-pointer hover:text-zinc-600`}
@@ -69,17 +69,18 @@ export default function Navbar({ sections, scrollToTop }) {
 				<ul
 					className={`${
 						mobileMenuOpen ? 'translate-x-0' : '-translate-x-[200%]'
-					} transition-all duration-500 ease-in-out flex flex-col md:flex-row md:space-x-12 pt-3`}>
+					} transition-all duration-500 ease-in-out flex flex-col space-y-[0.15rem] md:flex-row md:space-x-12 pt-3`}>
 					<li
-						className='text-lg text-zinc-200 md:text-xl hover:text-zinc-400 hover:cursor-pointer'
+						className='bg-zinc-900 px-2 py-1 rounded-md text-lg text-zinc-200 md:text-xl hover:text-zinc-400 hover:cursor-pointer'
 						onClick={scrollToTop}>
 						home
 					</li>
-					{sections.map((s) => (
-						<ScrollableLink
-							key={s}
-							section={s}
-						/>
+					{sections.map((section, index) => (
+						<div
+							key={section}
+							className='bg-zinc-900 p-1 rounded-md'>
+							<ScrollableLink section={section} />
+						</div>
 					))}
 				</ul>
 			</div>
