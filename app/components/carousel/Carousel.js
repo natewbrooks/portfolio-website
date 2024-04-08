@@ -13,9 +13,18 @@ export default function Carousel() {
 		// 	link: 'https://breakthroughcoaching.pro',
 		// },
 		{
+			title: 'Caption Creators',
+			dateCompleted: '2024',
+			codeLanguages: 'Next.JS (React), Firebase AUTH, Socket.io, MySQL, TailwindCSS',
+			projectDescription:
+				'Developed in Software Engineering class at university. Includes a multiplayer lobby system, user authentication, and a global leaderboard. The premise is players connect and play a hilarious online party game where players caption short videos sourced from random keywords or AI prompts.',
+			image: 'images/caption-creators.webp',
+			link: '',
+		},
+		{
 			title: 'Positive Professionals',
 			dateCompleted: '2024',
-			codeLanguages: 'Gatsby (React), TailwindCSS',
+			codeLanguages: 'Gatsby (React), Firebase AUTH, TailwindCSS',
 			projectDescription:
 				'First commercial website developed for a coaching team. Includes a CMS to create and deliver blog posts.',
 			image: 'images/ppro.webp',
@@ -32,7 +41,7 @@ export default function Carousel() {
 		{
 			title: 'Chess',
 			dateCompleted: '2022',
-			codeLanguages: 'Java',
+			codeLanguages: 'Java using Swing GUI',
 			projectDescription:
 				'A barebones chess demonstration, UI unfinished but fully playable with another person. I worked on it in preparation for taking my Java Associate certification.',
 			image: 'images/chess.webp',
@@ -50,7 +59,7 @@ export default function Carousel() {
 		{
 			title: 'Termdle',
 			dateCompleted: '2021',
-			codeLanguages: 'Java',
+			codeLanguages: 'Java using Swing GUI',
 			projectDescription:
 				'Wordle clone I created in two days for a school project, I thought it had potential so I continued to work on it.',
 			image: 'images/termdleImg.webp',
