@@ -1,29 +1,17 @@
 // HomeSection.js
 import { GoArrowDown } from 'react-icons/go';
 
-export default function Header({ scrolled }) {
+export default function Header({}) {
 	return (
 		<section
 			id='home'
-			className='flex flex-col items-center justify-center w-screen h-screen mb-16'>
-			<h1 className='text-4xl sm:text-5xl md:text-7xl lg:text-8xl select-none text-zinc-200'>
+			className='relative flex flex-col items-center justify-center w-screen h-screen '>
+			<h1 className='text-xl sm:text-5xl md:text-7xl lg:text-8xl break-words select-none text-zinc-200'>
 				natewbrooks
 			</h1>
 			<p className='text-red-300 break-words mx-12 p-5 text-center select-none w-[90%] text-sm md:text-lg'>
-				junior software developer who loves to learn new technology and create cool stuff.
+				software engineer who craves learning new technology and creating cool stuff.
 			</p>
-			<p
-				className={`absolute bottom-28 text-lg ${
-					scrolled ? 'transition-opacity duration-1000 opacity-0' : 'opacity-80 animate-pulse'
-				} hidden md:block`}>
-				(scroll)
-			</p>
-			<GoArrowDown
-				size={35}
-				className={`absolute bottom-10 ${
-					scrolled ? 'transition-opacity duration-300 opacity-0' : 'opacity-60 animate-bounce'
-				} hidden md:block`}
-			/>
 		</section>
 	);
 }

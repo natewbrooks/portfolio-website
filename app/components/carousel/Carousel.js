@@ -13,12 +13,22 @@ export default function Carousel() {
 		// 	link: 'https://breakthroughcoaching.pro',
 		// },
 		{
+			title:
+				'Positive ProfessionalsPositive ProfessionalsPositive ProfessionalsPositive Professionals',
+			dateCompleted: '2024',
+			codeLanguages: 'Gatsby (React), TailwindCSS',
+			projectDescription:
+				'First commercial website developed for a coaching team. Includes a CMS to create and deliver blog posts.',
+			image: 'images/ppro.webp',
+			link: 'https://positiveprofessionals.net',
+		},
+		{
 			title: 'Portfolio',
 			dateCompleted: '2023',
-			codeLanguages: 'HTML, TailwindCSS, Next.JS',
+			codeLanguages: 'Next.JS (React), TailwindCSS',
 			projectDescription: 'The website you are currently on. Hope you like it.',
 			image: 'images/portfolioSite.webp',
-			link: '',
+			link: 'https://natewbrooks.com',
 		},
 		{
 			title: 'Chess',

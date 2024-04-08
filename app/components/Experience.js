@@ -19,7 +19,7 @@ export default function Experience({}) {
 			</h2>
 
 			<div className='flex flex-col justify-center items-center h-full w-full'>
-				<p className='text-center mb-10 md:mb-20 xl:mb-28 text-md md:text-xl text-zinc-200 break-words w-[80vw] xl:w-[35vw]'>
+				<p className='text-center mb-10 md:mb-20  text-md md:text-xl text-zinc-200 break-words px-4 md:mx-20 lg:mx-40'>
 					I’m a 19 year old computer science college student with 6+ years of programming
 					experience. I started with Java, creating Minecraft plugins. As I grew more comfortable
 					with programming, I decided to branch out, and I tried different languages to create

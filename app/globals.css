@@ -69,6 +69,7 @@ a {
     animation: marquee 30s linear infinite;
 }
 
+
 .marquee2 {
     animation-delay: 15s;
 }
