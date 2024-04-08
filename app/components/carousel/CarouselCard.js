@@ -75,18 +75,12 @@ const CarouselCard = ({
 										isActive ? setProjectInfoVisible(!projectInformationVisible) : '';
 									}}
 									aria-label='information'
-									className={`block md:hidden text-zinc-200 ${
+									className={`block h-fit md:hidden text-zinc-200 ${
 										isActive
 											? 'hover:text-zinc-400 border-2 border-transparent hover:rounded-full hover:border-red-300'
 											: 'hover:cursor-default'
 									}`}>
-									{projectDescription != '' && (
-										<HiInformationCircle
-											className={`${
-												isActive ? 'h-[25px] w-[25px] md:h-[30px] md:w-[30px]' : 'h-[20px] w-[20px]'
-											}`}
-										/>
-									)}
+									{projectDescription != '' && <HiInformationCircle size={isActive ? 20 : 14} />}
 								</button>
 							)}
 						</div>

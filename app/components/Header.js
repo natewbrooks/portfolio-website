@@ -6,7 +6,7 @@ export default function Header({}) {
 		<section
 			id='home'
 			className='relative flex flex-col items-center justify-center w-screen h-screen '>
-			<h1 className='text-xl sm:text-5xl md:text-7xl lg:text-8xl break-words select-none text-zinc-200'>
+			<h1 className='text-2xl sm:text-5xl md:text-7xl lg:text-8xl break-words select-none text-zinc-200'>
 				natewbrooks
 			</h1>
 			<p className='text-red-300 break-words mx-12 p-5 text-center select-none w-[90%] text-sm md:text-lg'>
