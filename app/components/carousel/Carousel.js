@@ -13,8 +13,7 @@ export default function Carousel() {
 		// 	link: 'https://breakthroughcoaching.pro',
 		// },
 		{
-			title:
-				'Positive ProfessionalsPositive ProfessionalsPositive ProfessionalsPositive Professionals',
+			title: 'Positive Professionals',
 			dateCompleted: '2024',
 			codeLanguages: 'Gatsby (React), TailwindCSS',
 			projectDescription:
