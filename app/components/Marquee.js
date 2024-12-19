@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import Marquee from 'react-fast-marquee';
 import {
 	FaGithubSquare,
 	FaJsSquare,
@@ -7,73 +8,45 @@ import {
 	FaReact,
 	FaJava,
 	FaPython,
-	FaGitSquare,
 } from 'react-icons/fa';
 
-export default function Marquee({ size }) {
+export default function IconMarquee({ size }) {
 	return (
-		<div
-			className={`relative flex flex-row h-[80px] w-full items-center justify-center overflow-hidden`}>
-			<div className='marquee w-full flex flex-row justify-around h-full items-center text-zinc-200 whitespace-nowrap'>
-				<FaGithubSquare
-					size={size}
-					className={`xl:hover:scale-110 cursor-pointer xl:hover:text-red-300`}
-				/>
-				<FaJsSquare
-					size={size}
-					className={`xl:hover:scale-110 cursor-pointer xl:hover:text-red-300`}
-				/>
-				<FaCss3Alt
-					size={size}
-					className={`xl:hover:scale-110 cursor-pointer xl:hover:text-red-300`}
-				/>
-				<FaHtml5
-					size={size}
-					className={`xl:hover:scale-110 cursor-pointer xl:hover:text-red-300`}
-				/>
-				<FaReact
-					size={size}
-					className={`xl:hover:scale-110 cursor-pointer xl:hover:text-red-300`}
-				/>
-				<FaJava
-					size={size}
-					className={`xl:hover:scale-110 cursor-pointer xl:hover:text-red-300`}
-				/>
-				<FaPython
-					size={size}
-					className={`xl:hover:scale-110 cursor-pointer xl:hover:text-red-300`}
-				/>
-			</div>
-			<div className='marquee marquee2 w-full flex flex-row justify-around h-fit items-center text-zinc-200 whitespace-nowrap'>
-				<FaGithubSquare
-					size={size}
-					className={`xl:hover:scale-110 cursor-pointer xl:hover:text-red-300`}
-				/>
-				<FaJsSquare
-					size={size}
-					className={`xl:hover:scale-110 cursor-pointer xl:hover:text-red-300`}
-				/>
-				<FaCss3Alt
-					size={size}
-					className={`xl:hover:scale-110 cursor-pointer xl:hover:text-red-300`}
-				/>
-				<FaHtml5
-					size={size}
-					className={`xl:hover:scale-110 cursor-pointer xl:hover:text-red-300`}
-				/>
-				<FaReact
-					size={size}
-					className={`xl:hover:scale-110 cursor-pointer xl:hover:text-red-300`}
-				/>
-				<FaJava
-					size={size}
-					className={`xl:hover:scale-110 cursor-pointer xl:hover:text-red-300`}
-				/>
-				<FaPython
-					size={size}
-					className={`xl:hover:scale-110 cursor-pointer xl:hover:text-red-300`}
-				/>
-			</div>
-		</div>
+		<Marquee
+			className={`w-full h-24 overflow-hidden`}
+			gradient={true}
+			autoFill={true}
+			direction='right'
+			gradientColor={`rgb(24, 24, 27)`}
+			gradientWidth={150}>
+			<FaGithubSquare
+				size={size}
+				className='mx-8 hover:scale-110 cursor-pointer hover:text-red-300'
+			/>
+			<FaJsSquare
+				size={size}
+				className='mx-8 hover:scale-110 cursor-pointer hover:text-red-300'
+			/>
+			<FaCss3Alt
+				size={size}
+				className='mx-8 hover:scale-110 cursor-pointer hover:text-red-300'
+			/>
+			<FaHtml5
+				size={size}
+				className='mx-8 hover:scale-110 cursor-pointer hover:text-red-300'
+			/>
+			<FaReact
+				size={size}
+				className='mx-8 hover:scale-110 cursor-pointer hover:text-red-300'
+			/>
+			<FaJava
+				size={size}
+				className='mx-8 hover:scale-110 cursor-pointer hover:text-red-300'
+			/>
+			<FaPython
+				size={size}
+				className='mx-8 hover:scale-110 cursor-pointer hover:text-red-300'
+			/>
+		</Marquee>
 	);
 }

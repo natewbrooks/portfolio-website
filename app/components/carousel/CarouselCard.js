@@ -15,10 +15,7 @@ const CarouselCard = ({ title, dateCompleted, codeLanguages, projectDescription,
 						<div className=' flex flex-row w-full h-fit justify-center md:justify-between items-center'>
 							<div className='flex flex-col space-y-2'>
 								<div className='flex flex-row space-x-2 items-center'>
-									<FaCalendarCheck
-										className={`hidden md:flex w-4 h-4 md:w-5 md:h-5 text-red-300`}
-									/>
-									<h3 className='w-full text-zinc-500 md:text-zinc-200 text-sm md:text-lg text-center md:text-start'>
+									<h3 className='w-full text-red-300 text-sm md:text-lg text-center md:text-start'>
 										{dateCompleted}
 									</h3>
 								</div>
@@ -53,11 +50,16 @@ const CarouselCard = ({ title, dateCompleted, codeLanguages, projectDescription,
 					</div>
 					{projectDescription !== '' && (
 						<div
-							className={`absolute hidden md:flex flex-row p-4 text-sm border-2 rounded-md items-center w-full h-fit bg-zinc-900 bg-opacity-[.95] z-20 transition-all duration-500 ${
+							className={`absolute hidden md:flex flex-row p-4 text-sm rounded-b-md border-b-2 border-zinc-900 shadow-md items-center w-full h-fit bg-zinc-800 z-20 ${
 								projectInformationVisible
-									? 'translate-y-24 border-red-300 opacity-1'
-									: '-translate-y-24  drop-shadow-lg border-transparent opacity-0'
-							}`}>
+									? 'translate-y-24 opacity-100 visible'
+									: '-translate-y-24 drop-shadow-lg opacity-0 rounded-t-md invisible'
+							}`}
+							style={{
+								transition: projectInformationVisible
+									? 'transform 0.7s ease, opacity 0s ease 0s, visibility 0s ease 0s'
+									: 'transform 0.7s ease, opacity 1.4s ease 0s, visibility 0s ease 1.4s',
+							}}>
 							<p>{projectDescription}</p>
 						</div>
 					)}
@@ -70,8 +72,8 @@ const CarouselCard = ({ title, dateCompleted, codeLanguages, projectDescription,
 
 					<div className='flex flex-row justify-between items-center p-2 md:p-4 bg-zinc-900 w-full md:h-24 border-4 rounded-b-md border-zinc-800 z-10'>
 						<div className='flex flex-row justify-between items-center w-full h-full'>
-							<FaCode className={`w-8 h-8 md:w-6 md:h-6`} />
-							<h3 className='md:w-3/4 text-end text-xs md:text-lg'>{codeLanguages}</h3>
+							<FaCode className={`w-8 h-8`} />
+							<h3 className='w-3/4 text-end text-xs md:text-lg'>{codeLanguages}</h3>
 						</div>
 					</div>
 				</div>

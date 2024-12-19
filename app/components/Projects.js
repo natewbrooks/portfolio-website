@@ -10,8 +10,8 @@ export default function Projects() {
 	return (
 		<section
 			id='projects'
-			className='h-fit w-screen flex flex-col items-center bg-zinc-900 pb-[6rem] xl:pt-[6rem] xl:pb-[10rem]'>
-			<div className='flex flex-col mb-20 mt-20 space-y-8'>
+			className='overflow-hidden h-fit w-screen flex flex-col items-center bg-zinc-900 py-14 xl:pb-[10rem]'>
+			<div className='flex flex-col my-8 space-y-4 md:space-y-6'>
 				<h2 className='text-4xl sm:text-5xl md:text-6xl text-center text-zinc-200'>projects</h2>
 				<p className='text-md md:text-xl text-center text-red-300'>
 					check out what I've been up to recently

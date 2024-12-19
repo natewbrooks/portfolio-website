@@ -49,7 +49,7 @@ export default function Navbar({ sections, scrollToTop }) {
 			<div className='md:hidden fixed top-4 w-fit left-4 flex flex-col z-10'>
 				<button
 					onClick={toggleMobileMenu}
-					className={`w-fit bg-zinc-900 p-2 rounded-md text-zinc-200 md:hidden hover:cursor-pointer hover:text-zinc-600`}
+					className={`w-fit bg-zinc-900 border-2 border-zinc-800 p-2 rounded-md text-zinc-200 md:hidden hover:cursor-pointer hover:text-zinc-600`}
 					aria-label='hamburger menu'>
 					<div className=' flex flex-col items-center justify-evenly w-[32px] h-[32px]'>
 						<div
@@ -71,14 +71,14 @@ export default function Navbar({ sections, scrollToTop }) {
 						mobileMenuOpen ? 'translate-x-0' : '-translate-x-[200%]'
 					} transition-all duration-500 ease-in-out flex flex-col space-y-[0.15rem] md:flex-row md:space-x-12 pt-3`}>
 					<li
-						className='bg-zinc-900 px-2 py-1 rounded-md text-lg text-zinc-200 md:text-xl hover:text-zinc-400 hover:cursor-pointer'
+						className='bg-zinc-900 border-2 border-zinc-800 px-2 py-1 rounded-md text-lg text-zinc-200 md:text-xl hover:text-zinc-400 hover:cursor-pointer'
 						onClick={scrollToTop}>
 						home
 					</li>
 					{sections.map((section, index) => (
 						<div
 							key={section}
-							className='bg-zinc-900 p-1 rounded-md'>
+							className='bg-zinc-900 border-2 border-zinc-800 p-2 rounded-md'>
 							<ScrollableLink section={section} />
 						</div>
 					))}

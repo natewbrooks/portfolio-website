@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 import { NextButton, PrevButton, usePrevNextButtons } from './CarouselButtons';
 import { DotButton, useDotButton } from './CarouselDotButton';
 import CarouselCard from './CarouselCard';
@@ -10,7 +11,12 @@ const numberWithinRange = (number, min, max) => Math.min(Math.max(number, min), 
 
 const Carousel = (props) => {
 	const { slides, options } = props;
-	const [emblaRef, emblaApi] = useEmblaCarousel(options);
+	const autoplayOptions = {
+		delay: 8000, // 8 seconds
+		stopOnInteraction: false, // Continue autoplay after user interaction
+		stopOnMouseEnter: true, // Pause autoplay on mouse enter
+	};
+	const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay(autoplayOptions)]);
 	const tweenFactor = useRef(0);
 	const tweenNodes = useRef([]);
 
