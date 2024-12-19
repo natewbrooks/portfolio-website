@@ -9,7 +9,7 @@ export default function Contact({}) {
 			} border-t-4 border-zinc-700`}>
 			<div className='text-zinc-200 p-8 md:p-10 flex flex-col items-center justify-center space-y-10 md:space-y-0 md:flex-row h-full md:space-x-10'>
 				<h2 className='w-full md:w-[20rem] lg:w-[40rem] text-center text-3xl md:text-4xl lg:text-6xl '>
-					let's make something cool together.
+					let's make something together.
 				</h2>
 
 				<form

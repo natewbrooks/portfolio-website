@@ -1,8 +1,92 @@
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
+import { NextButton, PrevButton, usePrevNextButtons } from './CarouselButtons';
+import { DotButton, useDotButton } from './CarouselDotButton';
 import CarouselCard from './CarouselCard';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
-export default function Carousel() {
+const TWEEN_FACTOR_BASE = 0.52;
+
+const numberWithinRange = (number, min, max) => Math.min(Math.max(number, min), max);
+
+const Carousel = (props) => {
+	const { slides, options } = props;
+	const [emblaRef, emblaApi] = useEmblaCarousel(options);
+	const tweenFactor = useRef(0);
+	const tweenNodes = useRef([]);
+
+	const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi);
+	const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } =
+		usePrevNextButtons(emblaApi);
+
+	const setTweenNodes = useCallback((emblaApi) => {
+		// Querying the element we labeled 'slide-number'
+		tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
+			return slideNode.querySelector('.slide-number');
+		});
+	}, []);
+
+	const setTweenFactor = useCallback((emblaApi) => {
+		tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length;
+	}, []);
+
+	const tweenScale = useCallback((emblaApi) => {
+		const engine = emblaApi.internalEngine();
+		const scrollProgress = emblaApi.scrollProgress();
+
+		emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
+			let diffToTarget = scrollSnap - scrollProgress;
+			const slidesInSnap = engine.slideRegistry[snapIndex];
+
+			slidesInSnap.forEach((slideIndex) => {
+				// Remove the visibility check, always scale
+				if (engine.options.loop) {
+					engine.slideLooper.loopPoints.forEach((loopItem) => {
+						const target = loopItem.target();
+						if (slideIndex === loopItem.index && target !== 0) {
+							const sign = Math.sign(target);
+							if (sign === -1) {
+								diffToTarget = scrollSnap - (1 + scrollProgress);
+							} else if (sign === 1) {
+								diffToTarget = scrollSnap + (1 - scrollProgress);
+							}
+						}
+					});
+				}
+
+				const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current);
+				const scale = numberWithinRange(tweenValue, 0.75, 1).toString();
+				const opacity = numberWithinRange(tweenValue, 0, 1).toString();
+				const tweenNode = tweenNodes.current[slideIndex];
+
+				if (tweenNode) {
+					tweenNode.style.transform = `scale(${scale})`;
+					tweenNode.style.opacity = opacity;
+				}
+			});
+		});
+	}, []);
+
+	useEffect(() => {
+		if (!emblaApi) return;
+
+		const onInitOrReInit = () => {
+			setTweenNodes(emblaApi);
+			setTweenFactor(emblaApi);
+			// Delay the tweenScale call to after the DOM updates
+			requestAnimationFrame(() => {
+				tweenScale(emblaApi);
+			});
+		};
+
+		onInitOrReInit();
+
+		emblaApi
+			.on('init', onInitOrReInit)
+			.on('reInit', onInitOrReInit)
+			.on('scroll', () => tweenScale(emblaApi))
+			.on('slideFocus', () => tweenScale(emblaApi));
+	}, [emblaApi, tweenScale, setTweenNodes, setTweenFactor]);
+
 	const cardData = [
 		// {
 		// 	title: 'Breakthrough Coaching',
@@ -67,56 +151,56 @@ export default function Carousel() {
 		},
 	];
 
-	var [activeCardIndex, setActiveCardIndex] = useState(0);
-	var totalCards = cardData.length;
-	var leftCardIndex = (activeCardIndex - 1 + totalCards) % totalCards;
-	var rightCardIndex = (activeCardIndex + 1) % totalCards;
-
-	const handleLeftClick = () => {
-		setActiveCardIndex((activeCardIndex) =>
-			activeCardIndex === 0 ? totalCards - 1 : activeCardIndex - 1
-		);
-	};
-
-	const handleRightClick = () => {
-		setActiveCardIndex((activeCardIndex) =>
-			activeCardIndex === totalCards - 1 ? 0 : activeCardIndex + 1
-		);
-	};
-
 	return (
-		<>
-			<div className='flex flex-row lg:space-x-10 items-center justify-center'>
-				<CarouselCard
-					isActive={false}
-					{...cardData[leftCardIndex]}
-				/>
-				<CarouselCard
-					isActive={true}
-					{...cardData[activeCardIndex]}
-				/>
-				<CarouselCard
-					isActive={false}
-					{...cardData[rightCardIndex]}
-				/>
+		<div className='flex flex-col space-y-8 justify-center w-full overflow-x-hidden'>
+			<div
+				className=''
+				ref={emblaRef}>
+				<div className='flex touch-pan-y touch-pinch-zoom'>
+					{slides.map((index) => (
+						<div
+							key={index}
+							className='translate-y-0 translate-x-0 flex justify-center basis-[80%] md:basis-[65%] lg:basis-[50%] xl:basis-[45%] flex-grow-0 flex-shrink-0 h-fit w-full'>
+							<div className='slide-number shadow-md rounded-md flex justify-center select-none w-full h-full'>
+								<CarouselCard {...cardData[index]} />
+							</div>
+						</div>
+					))}
+				</div>
 			</div>
 
-			{/* Carousel Selector */}
-			<div className='w-screen flex flex-row items-center justify-center space-x-10 mt-10'>
-				<FaArrowLeft
-					size={40}
-					className='text-zinc-200 hover:cursor-pointer hover:text-zinc-400'
-					onClick={handleLeftClick}
-				/>
-				<p className='text-zinc-200 mt-2 text-xl md:text-2xl lg:text-4xl'>
-					{activeCardIndex + 1}/{totalCards}
-				</p>
-				<FaArrowRight
-					size={40}
-					className='text-zinc-200 hover:cursor-pointer hover:text-zinc-400'
-					onClick={handleRightClick}
-				/>
+			{/* Controls container */}
+			<div className='flex flex-col items-center space-y-6 '>
+				{/* Buttons container */}
+				<div className='flex space-x-8'>
+					<PrevButton
+						onClick={onPrevButtonClick}
+						disabled={prevBtnDisabled}
+					/>
+					<NextButton
+						onClick={onNextButtonClick}
+						disabled={nextBtnDisabled}
+					/>
+				</div>
+
+				{/* Dots container */}
+				<div className='flex space-x-2'>
+					{scrollSnaps.map((_, index) => {
+						const isActive = index === selectedIndex;
+						return (
+							<DotButton
+								key={index}
+								onClick={() => onDotButtonClick(index)}
+								className={
+									isActive ? 'w-3 h-3 rounded-full bg-red-300' : 'w-3 h-3 rounded-full bg-zinc-800'
+								}
+							/>
+						);
+					})}
+				</div>
 			</div>
-		</>
+		</div>
 	);
-}
+};
+
+export default Carousel;

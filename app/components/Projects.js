@@ -1,7 +1,12 @@
 // Projects.js
+// import Carousel from './carousel/Carousel';
 import Carousel from './carousel/Carousel';
 
 export default function Projects() {
+	const OPTIONS = { loop: true };
+	const SLIDE_COUNT = 5;
+	const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
 	return (
 		<section
 			id='projects'
@@ -13,7 +18,10 @@ export default function Projects() {
 				</p>
 			</div>
 
-			<Carousel />
+			<Carousel
+				slides={SLIDES}
+				options={OPTIONS}
+			/>
 		</section>
 	);
 }

@@ -19,18 +19,20 @@ export default function Experience({}) {
 			</h2>
 
 			<div className='flex flex-col justify-center items-center h-full w-full'>
-				<p className='text-center mb-10 md:mb-20  text-md md:text-xl text-zinc-200 break-words px-4 md:mx-20 lg:mx-40'>
-					I’m a 19 year old computer science college student with 6+ years of programming
-					experience. I started with Java, creating Minecraft plugins. As I grew more comfortable
-					with programming, I decided to branch out, and I tried different languages to create
-					things I thought were cool. After making a few websites and simple applications, college
+				<p className='mb-10 md:mb-20  text-md md:text-xl text-zinc-200 break-words px-4 md:mx-20 lg:mx-40'>
+					&nbsp;&nbsp;&nbsp;&nbsp; I’m a 20 year old software engineering student with 7+ years of
+					programming experience. It all started when I began creating Java Minecraft plugins at 10
+					years old. As I grew more and more comfortable with programming, I decided to explore the
+					horizon; I tried different languages in an effort to expand my knowledge and create things
+					that I thought were cool. After making a few websites and simple applications, college
 					brought me back to Java, where I then pursued getting certified.
 					<br />
 					<br />
-					I'm still very eager about branching out to create new things that maybe I'm not 100%
-					comfortable with. Whether it's web, desktop or mobile applications, or something
-					completely new, I'm always happy to take on new and interesting work so that eventually I
-					will be able to take on anything.
+					&nbsp;&nbsp;&nbsp;&nbsp; I'm extremely driven. I get so absorbed in my current programming
+					problem that I really can't get myself to take a break until it's finished. I am
+					passionate about branching out and learning new intimidating technologies to add to my
+					toolbox. I'm always happy to take a stab at a new tech stack or interesting work so that
+					eventually I will be able to confidently say I can build anything.
 				</p>
 
 				<div className='bg-zinc-900 rounded-t-[3rem] flex flex-col items-center justify-between h-fit w-screen mb-2 mt-20 md:mt-10'>
