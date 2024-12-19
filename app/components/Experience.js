@@ -2,8 +2,8 @@
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { HiCursorClick, HiInformationCircle } from 'react-icons/hi';
 import React, { useEffect, useState } from 'react';
-import Marquee from './Marquee';
 import CertMarquee from './CertMarquee';
+import IconMarquee from './IconMarquee';
 
 export default function Experience({}) {
 	return (
@@ -36,7 +36,7 @@ export default function Experience({}) {
 						<CertMarquee size={80} />
 					</div>
 					<div className='bg-zinc-900 h-fit py-2 w-screen flex items-center justify-center overflow-hidden'>
-						<Marquee size={80} />
+						<IconMarquee size={80} />
 					</div>
 				</div>
 			</div>

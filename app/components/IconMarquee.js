@@ -21,31 +21,31 @@ export default function IconMarquee({ size }) {
 			gradientWidth={150}>
 			<FaGithubSquare
 				size={size}
-				className='mx-8 hover:scale-110 cursor-pointer hover:text-red-300'
+				className='mx-8 md:hover:scale-110 cursor-pointer md:hover:text-red-300'
 			/>
 			<FaJsSquare
 				size={size}
-				className='mx-8 hover:scale-110 cursor-pointer hover:text-red-300'
+				className='mx-8 md:hover:scale-110 cursor-pointer md:hover:text-red-300'
 			/>
 			<FaCss3Alt
 				size={size}
-				className='mx-8 hover:scale-110 cursor-pointer hover:text-red-300'
+				className='mx-8 md:hover:scale-110 cursor-pointer md:hover:text-red-300'
 			/>
 			<FaHtml5
 				size={size}
-				className='mx-8 hover:scale-110 cursor-pointer hover:text-red-300'
+				className='mx-8 md:hover:scale-110 cursor-pointer md:hover:text-red-300'
 			/>
 			<FaReact
 				size={size}
-				className='mx-8 hover:scale-110 cursor-pointer hover:text-red-300'
+				className='mx-8 md:hover:scale-110 cursor-pointer md:hover:text-red-300'
 			/>
 			<FaJava
 				size={size}
-				className='mx-8 hover:scale-110 cursor-pointer hover:text-red-300'
+				className='mx-8 md:hover:scale-110 cursor-pointer md:hover:text-red-300'
 			/>
 			<FaPython
 				size={size}
-				className='mx-8 hover:scale-110 cursor-pointer hover:text-red-300'
+				className='mx-8 md:hover:scale-110 cursor-pointer md:hover:text-red-300'
 			/>
 		</Marquee>
 	);
