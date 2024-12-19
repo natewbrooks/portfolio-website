@@ -67,7 +67,7 @@ const CarouselCard = ({ title, dateCompleted, codeLanguages, projectDescription,
 					<img
 						src={image}
 						alt={title}
-						className='w-full aspect-square md:aspect-video z-10 object-contain border-x-4 border-zinc-800'
+						className='w-full aspect-square md:aspect-video z-10 object-cover md:object-contain border-x-4 border-zinc-800'
 					/>
 
 					<div className='flex flex-row justify-between items-center p-2 md:p-4 bg-zinc-900 w-full md:h-24 border-4 rounded-b-md border-zinc-800 z-10'>
