@@ -6,6 +6,9 @@ const acme = Acme({ subsets: ['latin'], weight: ['400'] });
 export const metadata = {
 	title: 'natewbrooks',
 	description: 'portfolio',
+	icons: {
+		icon: '/favicon.ico',
+	},
 };
 
 export default function RootLayout({ children }) {
