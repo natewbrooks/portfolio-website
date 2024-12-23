@@ -10,7 +10,7 @@ export default function Header({}) {
 				natewbrooks
 			</h1>
 			<h1 className='text-center md:hidden text-6xl break-words select-none text-zinc-200'>
-				nate<br></br>w.<br></br>brooks
+				nate w. <br></br>brooks
 			</h1>
 			<p className='text-red-300 break-words mx-12 p-5 text-center select-none w-[90%] text-sm md:text-lg'>
 				software engineer who craves learning new technology and creating cool stuff.
