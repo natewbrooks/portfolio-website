@@ -9,10 +9,10 @@ export default function Header({}) {
 			<h1 className='hidden md:flex text-2xl sm:text-5xl md:text-7xl lg:text-8xl break-words select-none text-zinc-200'>
 				natewbrooks
 			</h1>
-			<h1 className='text-center md:hidden text-6xl break-words select-none text-zinc-200'>
+			<h1 className='text-center md:hidden text-6xl sm:text-7xl break-words select-none text-zinc-200'>
 				nate w. <br></br>brooks
 			</h1>
-			<p className='text-red-300 break-words mx-12 p-5 text-center select-none w-[90%] text-sm md:text-lg'>
+			<p className='text-red-300 break-words mx-12 p-5 text-center select-none max-w-[350px] sm:max-w-[450px] xl:max-w-[600px] text-sm md:text-lg'>
 				software engineer who craves learning new technology and creating cool stuff.
 			</p>
 		</section>
