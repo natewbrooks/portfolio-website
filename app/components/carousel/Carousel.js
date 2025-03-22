@@ -103,6 +103,15 @@ const Carousel = (props) => {
 		// 	link: 'https://breakthroughcoaching.pro',
 		// },
 		{
+			title: 'Linganore United Methodist Church',
+			dateCompleted: '2025',
+			codeLanguages: 'Docker, Vite (React), MySQL, TailwindCSS',
+			projectDescription:
+				'Developed professionally for the Linganore United Methodist Church over the course of four weeks. Created a custom admin panel for the backend. Everything is customizable.',
+			image: 'images/linganoreumc.webp',
+			link: '',
+		},
+		{
 			title: 'Caption Creators',
 			dateCompleted: '2024',
 			codeLanguages: 'Next.JS (React), Firebase AUTH, Socket.io, MySQL, TailwindCSS',
