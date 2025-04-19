@@ -105,11 +105,11 @@ const Carousel = (props) => {
 		{
 			title: 'Linganore United Methodist Church',
 			dateCompleted: '2025',
-			codeLanguages: 'Docker, Vite (React), MySQL, TailwindCSS',
+			codeLanguages: 'Docker, NextJS (React), MySQL, TailwindCSS',
 			projectDescription:
-				'Developed professionally for the Linganore United Methodist Church over the course of four weeks. Created a custom admin panel for the backend. Everything is customizable.',
+				'Developed professionally for the Linganore United Methodist Church over the course of five weeks. Created a custom admin panel for the backend. Everything is customizable.',
 			image: 'images/linganoreumc.webp',
-			link: '',
+			link: 'https://linganoreumc.com',
 		},
 		{
 			title: 'Caption Creators',
