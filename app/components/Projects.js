@@ -4,7 +4,7 @@ import Carousel from './carousel/Carousel';
 
 export default function Projects() {
 	const OPTIONS = { loop: true };
-	const SLIDE_COUNT = 5;
+	const SLIDE_COUNT = 6;
 	const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 	return (
