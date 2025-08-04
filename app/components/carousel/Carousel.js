@@ -103,6 +103,24 @@ const Carousel = (props) => {
 		// 	link: 'https://breakthroughcoaching.pro',
 		// },
 		{
+			title: 'Automated Isolated Network Provisioner',
+			dateCompleted: '2025',
+			codeLanguages: 'Docker, SvelteKit, TailwindCSS, Terraform, Python (FastAPI)',
+			projectDescription:
+				'Sensitive information redacted. Architected and solely developed a policy compliant full-stack automation platform for FortiGate configuration and isolated network provisioning using Terraform, FastAPI, and Svelte. Developed the system design, UI/UX implementation, and infrastructure-as-code workflows while self-learning new technologies.',
+			image: 'images/management_tool.webp',
+			link: '',
+		},
+		{
+			title: 'JOUST',
+			dateCompleted: '2025',
+			codeLanguages: 'Three.js, React, TailwindCSS',
+			projectDescription:
+				'Solo developed over a semester during my Computer Graphics class. Immersive 3D jousting game that combines side-scrolling mechanics with perspective-based combat using Three.js. The game focuses on an engaging jousting experience with a detailed point system and a whimsical medieval presentation. My motivation stemmed from a long-standing passion for bringing this concept to life. This was a project I had been dreaming of developing for several years. The challenge of implementing a targeting-based combat system within a stylized medieval setting using the new-to-me framework Three.js provided an great opportunity to expand my technical skills while creating something visually distinctive.',
+			image: 'images/joust.webp',
+			link: '',
+		},
+		{
 			title: 'Linganore United Methodist Church',
 			dateCompleted: '2025',
 			codeLanguages: 'Docker, NextJS (React), MySQL, TailwindCSS',
@@ -112,11 +130,20 @@ const Carousel = (props) => {
 			link: 'https://linganoreumc.com',
 		},
 		{
+			title: 'DIMF AutoPoster',
+			dateCompleted: '2025',
+			codeLanguages: 'Java, MySQL, Python (FastAPI)',
+			projectDescription:
+				'Solo developed for my Database Mangagement Systems class. Only requirement was a frontend in Java Swing and a MySQL server. Created for the Defense Intelligence Memorial Foundation (DIMF). Uses Google search and image APIs to aggregate data about a fallen veteran. That is then run through AI to generate a meaningful and accurate memorialization post about the veteran. Includes a database that keeps track of the post status on different social medias. Meant to be used as a custom post generator / social media tracker to save time bookkeeping.',
+			image: 'images/dimf.webp',
+			link: '',
+		},
+		{
 			title: 'Caption Creators',
 			dateCompleted: '2024',
 			codeLanguages: 'Next.JS (React), Firebase AUTH, Socket.io, MySQL, TailwindCSS',
 			projectDescription:
-				'Developed in Software Engineering class at university. Includes a multiplayer lobby system, user authentication, and a global leaderboard. The premise is players connect and play a hilarious online party game where players caption short videos sourced from random keywords or AI prompts.',
+				'Solo developed in Software Engineering class at university. Includes a multiplayer lobby system, user authentication, and a global leaderboard. The premise is players connect and play a hilarious online party game where players caption short videos sourced from random keywords or AI prompts.',
 			image: 'images/caption-creators.webp',
 			link: '',
 		},
