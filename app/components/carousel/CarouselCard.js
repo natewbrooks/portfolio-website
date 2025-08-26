@@ -24,8 +24,8 @@ const CarouselCard = ({ title, dateCompleted, codeLanguages, projectDescription,
 										<Link
 											href={link}
 											target='_blank'>
-											<h3 className='truncate w-fit max-w-full text-md md:text-2xl'>
-												{title.length > 24 ? `${title.substring(0, 24)}...` : title}
+											<h3 className='truncate w-full text-md md:text-2xl'>
+												{title}
 											</h3>
 										</Link>
 										<BiLinkExternal

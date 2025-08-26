@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { FaGithubSquare, FaDiscord, FaHamburger } from 'react-icons/fa';
+import { IoDocumentText } from "react-icons/io5";
 import ScrollableLink from './ScrollableLink';
+import resume from '../../public/NathanielBrooksResume.pdf'
 
 export default function Navbar({ sections, scrollToTop }) {
 	// State variable to track the mobile menu open/close state
@@ -20,14 +22,20 @@ export default function Navbar({ sections, scrollToTop }) {
 					onClick={() => window.open('https://github.com/natewbrooks?tab=repositories', '_blank')}
 					className='hidden md:block mr-5 text-zinc-200 hover:cursor-pointer hover:text-zinc-400'
 				/>
-				<FaDiscord
+				{/* <FaDiscord
 					size={35}
 					onClick={() => {
 						navigator.clipboard.writeText('n8ful');
 						alert('discord has been copied to your clipboard!');
 					}}
 					className='hidden md:block mr-5 text-zinc-200 hover:cursor-pointer hover:text-zinc-400'
-				/>
+				/> */}
+				<a href={resume} download={"NateBrooksResume"} target='_blank'>
+					<IoDocumentText
+						size={35}
+						className='hidden md:block mr-5 text-zinc-200 hover:cursor-pointer hover:text-zinc-400'
+					/>
+				</a>
 			</div>
 
 			<ul className={`hidden md:flex md:flex-row md:space-x-12`}>

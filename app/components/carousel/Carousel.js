@@ -103,7 +103,7 @@ const Carousel = (props) => {
 		// 	link: 'https://breakthroughcoaching.pro',
 		// },
 		{
-			title: 'Automated Isolated Network Provisioner',
+			title: 'Proprietary Automated Isolated Network Provisioner',
 			dateCompleted: '2025',
 			codeLanguages: 'Docker, SvelteKit, TailwindCSS, Terraform, Python (FastAPI)',
 			projectDescription:
