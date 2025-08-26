@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import { FaGithubSquare, FaDiscord, FaHamburger } from 'react-icons/fa';
 import { IoDocumentText } from "react-icons/io5";
 import ScrollableLink from './ScrollableLink';
-import resume from '../../public/NathanielBrooksResume.pdf'
 
 export default function Navbar({ sections, scrollToTop }) {
 	// State variable to track the mobile menu open/close state
