@@ -30,7 +30,7 @@ export default function Navbar({ sections, scrollToTop }) {
 					}}
 					className='hidden md:block mr-5 text-zinc-200 hover:cursor-pointer hover:text-zinc-400'
 				/> */}
-				<a href={resume} download={"NateBrooksResume"} target='_blank'>
+				<a href={"NathanielBrooksResume.pdf"} download>
 					<IoDocumentText
 						size={35}
 						className='hidden md:block mr-5 text-zinc-200 hover:cursor-pointer hover:text-zinc-400'
