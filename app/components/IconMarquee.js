@@ -35,7 +35,7 @@ export default function IconMarquee({ size }) {
 				className='mx-8 md:hover:scale-110 cursor-pointer md:hover:text-red-300'
 			/>
 			<SiTypescript
-				size={size-8}
+				size={size-10}
 				className='mx-8 md:hover:scale-110 cursor-pointer md:hover:text-red-300'
 			/>
 			<FaCss3Alt
@@ -51,7 +51,7 @@ export default function IconMarquee({ size }) {
 				className='mx-8 md:hover:scale-110 cursor-pointer md:hover:text-red-300'
 			/>
 			<SiSvelte
-				size={size-8}
+				size={size-10}
 				className='mx-8 md:hover:scale-110 cursor-pointer md:hover:text-red-300'
 			/>
 			<FaJava
@@ -63,7 +63,7 @@ export default function IconMarquee({ size }) {
 				className='mx-8 md:hover:scale-110 cursor-pointer md:hover:text-red-300'
 			/>
 			<SiTerraform
-				size={size-8}
+				size={size-10}
 				className='mx-8 md:hover:scale-110 cursor-pointer md:hover:text-red-300'
 			/>
 		</Marquee>
